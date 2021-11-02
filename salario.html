@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salários versão inicial</title>
+    <link rel="stylesheet" href="css/salario.css">
+</head>
+<body onbeforeunload="return sair()">
+    <form name="formulario" class="salario" id="formulario">
+        <fieldset>
+            <legend>Calculando o salário</legend>
+            <table>
+                <tr>
+                    <td colspan="2"><img src="imagens/acme.jpg" alt="Logo da empresa"></td>
+                </tr>
+                <tr>
+                    <td>Informe o salário atual:</td>
+                    <td><input type="text" id="salario" alt="salario"></td>
+                </tr>
+                <tr>
+                    <td>Informe o percentual de reajuste:</td>
+                    <td><input type="text" id="percentual" alt="percentual reajuste"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="percentual_aplicado">Total do Reajuste em %:</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="aumento">Valor do aumento em R$:</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="novo">Novo salário em R$:</div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <button id="reajustar" onclick="return calcula()">Reajustar!</button>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/salario.js"></script>
+</body>
+</html>
